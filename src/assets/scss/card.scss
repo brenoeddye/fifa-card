@@ -7,27 +7,48 @@
     background-size: 105%;
     background-position-x: -6px;
     background-position-y: -5px;
+    transition: all .25s linear;
+
+    &::before {
+        content: '';
+        display: flex;
+        position: absolute;
+        height: 35vh;
+        width: 4.3vw;
+        top: 2.8vh;
+        left: 4.3vw;
+    }
 
     &__top {
         position: absolute;
         left: 30px;
         top: 60px;
+
+        &::after {
+            content: '';
+            display: flex;
+        }
+
         &--ovrl {
             span {
-                font-size: 72px;
-                padding-left: 3vw;
+                font-size: 80px;
+                padding-left: 3.5vw;
             }
 
             p {
                 margin: 0;
+                position: relative;
+                top: -1.7vh;
                 text-align: center;
-                font-size: 24px;
+                font-size: 32px;
+                padding-left: 3.19vw;
             }
         }
 
         &--nation {
             img {
-                max-width: 30px;
+                max-width: 56px;
+                padding-left: 65px;
             }
         }
     }
@@ -39,9 +60,10 @@
     &__name {
         position: absolute;
         text-align: center;
-        left: 7.7vw;
-        font-size: 32px;
-        top: 33.5vh;
+        left: 3vw;
+        width: 75%;
+        font-size: 40px;
+        top: 32.5vh;
         text-transform: uppercase;
         letter-spacing: -0.6px;
     }
@@ -49,14 +71,12 @@
     &__stats {
         display: flex;
         position: absolute;
-        font-size: 32px;
-        bottom: 8vh;
+        font-size: 36px;
+        column-gap: 1.4vw;
+        left: 3.2vw;
+        bottom: 6.5vh;
 
         ul {
-            padding-left: 30px;
-            &:first-child {
-                padding-left: 4.7vw;
-            }
             li {
                 display: flex;
             }
@@ -66,15 +86,30 @@
     &.totw {
         background-image: url("./images/cards/totw.png");
         color: #FFE28C;
+
+        &::before {
+            content: '';
+            height: 32vh;
+            top: 8vh;
+            background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgba(0,0,0,.6) 52%, rgba(0,212,255,0) 100%);
+        }
     }
 
     &.gold {
         background-image: url("./images/cards/gold.png");
         color: #000;
+
+        &::before {
+            content: none;
+        }
     }
 
     &.wc {
         background-image: url("./images/cards/wc.png");
         color: #fff;
+
+        &::before {
+            background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgba(0,0,0,.18) 52%, rgba(0,212,255,0) 100%);
+        }
     }
 }

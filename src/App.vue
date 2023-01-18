@@ -15,7 +15,7 @@ export default defineComponent({
 <template>
   <div class="app">
     <Card 
-      type="wc"
+      type="totw"
       overall="91"
       position="ST"
       nation="france"
