@@ -1,0 +1,19 @@
+@import './fonts.scss';
+
+@import './card.scss';
+
+body {
+    font-family: "DINPro-Cond",Arial,sans-serif;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./images/bg.jpg');
+    background-size: cover;
+}
+
+.app {
+    .card {
+        left: 40vw;
+        top: 20vh;
+    }
+}

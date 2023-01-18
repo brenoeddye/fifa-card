@@ -1,0 +1,80 @@
+.card {
+    position: relative;
+    background-repeat: none;
+    height: 605px;
+    width: 420px;
+    background-position: center;
+    background-size: 105%;
+    background-position-x: -6px;
+    background-position-y: -5px;
+
+    &__top {
+        position: absolute;
+        left: 30px;
+        top: 60px;
+        &--ovrl {
+            span {
+                font-size: 72px;
+                padding-left: 3vw;
+            }
+
+            p {
+                margin: 0;
+                text-align: center;
+                font-size: 24px;
+            }
+        }
+
+        &--nation {
+            img {
+                max-width: 30px;
+            }
+        }
+    }
+
+    &__image {
+
+    }
+
+    &__name {
+        position: absolute;
+        text-align: center;
+        left: 7.7vw;
+        font-size: 32px;
+        top: 33.5vh;
+        text-transform: uppercase;
+        letter-spacing: -0.6px;
+    }
+
+    &__stats {
+        display: flex;
+        position: absolute;
+        font-size: 32px;
+        bottom: 8vh;
+
+        ul {
+            padding-left: 30px;
+            &:first-child {
+                padding-left: 4.7vw;
+            }
+            li {
+                display: flex;
+            }
+        }
+    }
+
+    &.totw {
+        background-image: url("./images/cards/totw.png");
+        color: #FFE28C;
+    }
+
+    &.gold {
+        background-image: url("./images/cards/gold.png");
+        color: #000;
+    }
+
+    &.wc {
+        background-image: url("./images/cards/wc.png");
+        color: #fff;
+    }
+}
