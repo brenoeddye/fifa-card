@@ -15,12 +15,13 @@ export default defineComponent({
 <template>
   <div class="app">
     <Card 
-      type="totw"
+      type="wc"
       overall="91"
       position="ST"
       nation="france"
-      club="PSG"
-      playerImg="some"
+      league="ligue1"
+      club="psg"
+      playerImg="guest"
       playerName="Mbappé"
       playerPace="97"
       playerShot="89"
@@ -28,7 +29,7 @@ export default defineComponent({
       playerDribling="92"
       playerDefense="36"
       playerPhysic="76"
-      buff="Hunter"
+      buff="hunter"
     />
   </div>
 </template>

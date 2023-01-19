@@ -10,6 +10,7 @@ export default defineComponent({
         overall: String,
         position: String,
         nation: String,
+        league: String,
         club: String,
         playerImg: String,
         playerName: String,
@@ -36,29 +37,28 @@ export default defineComponent({
                 <img :src="'./images/nations/'+ nation + '.png'" alt="Player Nation">
             </div>
             <div class="card__top--club">
-                {{ club }}
+                <img :src="'./images/leagues/' + league + '/' + club + '.png'" alt="">
+                
             </div>
         </div>
         <div class="card__image">
-            {{ playerImg }}
+            <img :src="'./images/guest.png'" alt="">
         </div>
         <div class="card__name">
             {{ playerName }}
         </div>
         <div class="card__stats">
             <ul>
-                <li>{{ playerPace }} PAC</li>
-                <li>{{ playerShot }} SHO</li>
-                <li>{{ playerPass }} PAS</li>
+                <li><b>{{ playerPace }}</b> PAC</li>
+                <li><b>{{ playerShot }}</b> SHO</li>
+                <li><b>{{ playerPass }}</b> PAS</li>
             </ul>
             <ul>
-                <li>{{ playerDribling }} DRI</li>
-                <li>{{ playerDefense }} DEF</li>
-                <li>{{ playerPhysic }} PHY</li>
+                <li><b>{{ playerDribling }}</b> DRI</li>
+                <li><b>{{ playerDefense }}</b> DEF</li>
+                <li><b>{{ playerPhysic }}</b> PHY</li>
             </ul>
         </div>
-        <div class="card__buff">
-            {{ buff }}
-        </div>
+        <i :class="'card__buff ' + buff"></i>
     </div>
 </template>
