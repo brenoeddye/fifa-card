@@ -1,0 +1,20 @@
+.menu {
+    position: absolute;
+    background-color: rgba(#000000, .6);
+    border-radius: 10px;
+    padding: 10px 20px;
+    top: 20%;
+    left: 10%;
+    color: white;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        &--section {
+            background-color: rgb(70, 70, 70);
+            border-radius: 10px;
+            padding: 15px;
+        }
+    }
+}

@@ -1,6 +1,9 @@
 @import './fonts.scss';
 
 @import './card.scss';
+@import './menu.scss';
+@import './input.scss';
+@import './steps.scss';
 
 body {
     font-family: 'DIN Pro Cond', sans-serif;
@@ -10,6 +13,8 @@ body {
     background-image: url('./images/bg.jpg');
     background-size: cover;
 }
+
+i {font-style: normal;}
 
 .app {
     .card {
