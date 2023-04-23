@@ -2,9 +2,6 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-    setup() {
-        
-    },
     props: {
         type: String,
         overall: String,

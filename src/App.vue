@@ -8,7 +8,13 @@ export default defineComponent({
   data() {
     return {
       playerOver: '99',
-      playerName: 'Seu nome'
+      playerName: 'Seu nome',
+      playerPos: 'ATA',
+      options:[
+        { opt: ['Ataque', 'ATA', 'PE', 'PD', 'MAE', 'MAD'] },
+        { opt: ['Meio-Campo', 'MEI','MC','ME','MD','VOL'] },
+        { opt: ['Defesa', 'ADD', 'ADE', 'ZAG', 'LE', 'LD', 'GOL'] }
+      ]
     }
   }
 })
@@ -20,9 +26,17 @@ export default defineComponent({
         <h1>Criação de Card</h1>
         <div class="menu__content">
           <section class="menu__content--section">
+            <h2>Nome</h2>
+            <input type="text" v-model="playerName" maxlength="20"/>
+          </section>
+          <section class="menu__content--section">
             <h2>Overal e Posição</h2>
             <input type="number" v-model="playerOver" max="99" min="0" maxlength="2"/>
-            <input type="text" v-model="playerName" maxlength="20"/>
+            <select v-model="playerPos">
+              <optgroup v-for="(option, index) in options" :key="option.opt" :label="option.opt[0]">
+                <option> {{ option.opt[index] }}</option>
+              </optgroup>
+            </select>
           </section>
           <section class="menu__content--section">
             <h2>País e clube</h2>
@@ -33,7 +47,7 @@ export default defineComponent({
     <Card 
       type="gold"
       :overall="playerOver"
-      position="ST"
+      :position="playerPos"
       nation="france"
       league="ligue1"
       club="psg"
