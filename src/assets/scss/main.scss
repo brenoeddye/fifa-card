@@ -1,12 +1,14 @@
-@import './fonts.scss';
+@import './fonts';
 
-@import './card.scss';
-@import './menu.scss';
-@import './input.scss';
-@import './steps.scss';
+@import './animations';
+@import './buttons';
+@import './card';
+@import './menu';
+@import './input';
+@import './steps';
 
 body {
-    font-family: 'DIN Pro Cond', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     width: 100vw;
     height: 100vh;

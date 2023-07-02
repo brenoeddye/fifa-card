@@ -1,0 +1,30 @@
+button {
+    border: 0;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 15px 20px;
+    color: #fff;
+    transition: all .3s linear;
+    cursor: pointer;
+
+    &.primary {
+        background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%);
+        text-align: center;
+        background-size: 200% auto;      
+
+        &:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    &.secondary {
+        background-color: #6c6c6c;
+
+        &:hover {
+            background-color: lighten(#6c6c6c, 8);
+        }
+    }
+}

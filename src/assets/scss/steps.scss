@@ -1,3 +1,9 @@
 .steps {
-    
+    &__step {
+        &--icon {
+            &::before {
+                content: '\f007';
+            }
+        }
+    }
 }
