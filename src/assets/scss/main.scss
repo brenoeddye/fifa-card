@@ -1,14 +1,13 @@
 @import './fonts';
+@import './variables';
 
 @import './animations';
 @import './buttons';
 @import './card';
-@import './menu';
-@import './input';
 @import './steps';
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $primary-font;
     margin: 0;
     width: 100vw;
     height: 100vh;

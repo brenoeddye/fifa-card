@@ -27,7 +27,7 @@ export default defineComponent({
     <div :class="'card ' + type">
         <div class="card__top">
             <div class="card__top--ovrl">
-                <span>{{ overall }}</span>
+                <input type="text" :value="overall">
                 <p>{{ position }}</p>
             </div>
             <div class="card__top--nation">
@@ -42,18 +42,18 @@ export default defineComponent({
             <img :src="'./images/guest.png'" alt="">
         </div>
         <div class="card__name">
-            {{ playerName }}
+            <input type="text" :value="playerName">
         </div>
         <div class="card__stats">
             <ul>
-                <li><b>{{ playerPace }}</b> PAC</li>
-                <li><b>{{ playerShot }}</b> SHO</li>
-                <li><b>{{ playerPass }}</b> PAS</li>
+                <li><b><input type="text" :value="playerPace"></b> PAC</li>
+                <li><b><input type="text" :value="playerShot"></b> SHO</li>
+                <li><b><input type="text" :value="playerPass"></b> PAS</li>
             </ul>
             <ul>
-                <li><b>{{ playerDribling }}</b> DRI</li>
-                <li><b>{{ playerDefense }}</b> DEF</li>
-                <li><b>{{ playerPhysic }}</b> PHY</li>
+                <li><b><input type="text" :value="playerDribling"></b> DRI</li>
+                <li><b><input type="text" :value="playerDefense"></b> DEF</li>
+                <li><b><input type="text" :value="playerPhysic"></b> PHY</li>
             </ul>
         </div>
         <i :class="'card__buff ' + buff"></i>
