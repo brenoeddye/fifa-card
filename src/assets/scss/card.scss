@@ -9,6 +9,7 @@
     background-position-x: -6px;
     background-position-y: -5px;
     transition: all .25s linear;
+    z-index: 99;
 
     &::before {
         content: '';
@@ -94,15 +95,15 @@
         font-family: $secondary-font;
         background: transparent;
         text-align: center;
-        left: 5.2vw;
+        left: 6.3rem;
         width: 55%;
         font-size: 40px;
         font-weight: 700;
-        top: 32.9vh;
+        top: 20rem;
         text-transform: uppercase;
         letter-spacing: -0.6px;
         border: 0;
-        border-bottom: 1px solid black;
+        padding-bottom: 6px;
     }
 
     &__stats {
@@ -167,6 +168,61 @@
             }
         }
     }
+
+    &__prev {
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        height: 605px;
+        width: 420px;
+        left: 30vw;
+        top: 20vh;
+        opacity: .3;
+    }
+
+    &__next {
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        height: 605px;
+        width: 420px;
+        right: 30vw;
+        top: 20vh;
+        opacity: .3;
+    }
+
+    &__controls {
+        width: 100vw;
+        position: relative;
+        top: -10rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        &--button {
+            &.back {
+                background: url($arrow-left) no-repeat;
+                background-size: 100%;
+                font-size: 0;
+                display: flex;
+                width: 64px;
+                height: 64px;
+                filter: brightness(900%);
+            }
+
+            &.next {
+                background: url($arrow-right) no-repeat;
+                background-size: 100%;
+                font-size: 0;
+                display: flex;
+                width: 64px;
+                height: 64px;
+                filter: brightness(900%);
+            }
+        }
+    }
+
+    // Models
 
     &.totw {
         background-image: url("./images/cards/totw.png");

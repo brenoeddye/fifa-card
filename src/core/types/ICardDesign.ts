@@ -1,5 +1,5 @@
 export interface CardDesign {
-    title: string;
-    image: string;
-    color: string;
+    name: string;
+    color1: string;
+    color2: string;
 }
